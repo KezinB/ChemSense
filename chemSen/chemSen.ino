@@ -1,8 +1,8 @@
 // ESP32 Code: Read analog data and send via Serial
 
-const int sensorPin = 2;           // Use any ADC1 GPIO pin (e.g., GPIO 34)
+const int sensorPin = A1;           // Use any ADC1 GPIO pin (e.g., GPIO 34)
 const float referenceVoltage = 5;  // Reference voltage for conversion
-const int adcResolution = 4095;      // 12-bit ADC resolution
+const int adcResolution = 1023;      // 12-bit ADC resolution
 int sensorValue = 0;                 // Variable to store the analog reading
 
 void setup() {
