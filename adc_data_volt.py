@@ -13,7 +13,7 @@ sensor_name = input("Enter the sensor name: ")
 initial_resistance = input("Enter the initial resistance (in ohms): ")
 
 # Set up the serial port (adjust 'COMx' for Windows or '/dev/ttyUSBx' for Linux/Mac)
-ser = serial.Serial('COM5', 115200, timeout=1)  # Adjust for your setup
+ser = serial.Serial('COM4', 115200, timeout=1)  # Adjust for your setup
 ser.flush()  # Clear old data from serial buffer
 
 # Record the start time

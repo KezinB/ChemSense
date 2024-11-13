@@ -1,10 +1,22 @@
 {
-    "cSpell.words": [
-        "autoscale",
-        "Autoscale",
-        "blit",
-        "relim",
-        "xlabel",
-        "ylabel"
-    ]
+  "cSpell.words": [
+    "arange",
+    "arrowprops",
+    "arrowstyle",
+    "autoscale",
+    "Autoscale",
+    "axhline",
+    "blit",
+    "fontsize",
+    "linestyle",
+    "relim",
+    "xlabel",
+    "xlim",
+    "xticks",
+    "xycoords",
+    "xytext",
+    "ylabel",
+    "ylim",
+    "yticks"
+  ]
 }
