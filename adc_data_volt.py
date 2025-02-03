@@ -13,7 +13,7 @@ sensor_name = input("Enter the sensor name: ")
 initial_resistance = input("Enter the initial resistance (in ohms): ")
 
 # Set up the serial port (adjust 'COMx' for Windows or '/dev/ttyUSBx' for Linux/Mac)
-ser = serial.Serial('COM4', 115200, timeout=1)  # Adjust for your setup
+ser = serial.Serial('COM3', 115200, timeout=1)  # Adjust for your setup
 ser.flush()  # Clear old data from serial buffer
 
 # Record the start time
@@ -109,7 +109,7 @@ def update(frame):
             raw_value = int(data.split()[2])  # Extract the sensor value
 
             # Map raw ADC value to voltage (assuming 10-bit ADC, range 0-1023)
-            voltage = raw_value * (5.0 / 1023.0)
+            voltage = raw_value * (5.0 / 4096.0)
 
             # Calculate elapsed time in seconds from the start of the program
             elapsed_time = time.perf_counter() - start_time
@@ -128,7 +128,7 @@ def update(frame):
             print(f"Time: {elapsed_time:.2f} s, Voltage: {voltage:.4f} V")
 
             # Limit to last 100 data points for real-time plot readability
-            if len(x_data) > 100:
+            if len(x_data) > 10000:
                 x_data.pop(0)
                 y_data.pop(0)
 
